@@ -38,20 +38,6 @@ CREATE TABLE `events` (
   `description` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Extraindo dados da tabela `events`
---
-
-INSERT INTO `events` (`id`, `user_id`, `title`, `color`, `initialday`, `endday`, `description`) VALUES
-(1, 1, 'Meeting at the office', '#0000FF', '2019-02-10 08:00:00', '2019-02-11 10:00:00', 'Room 7'),
-(3, 6, 'Meeting at the Café', '#00ff00', '2019-02-19 00:00:00', '2019-02-21 00:00:00', 'Happy hour'),
-(33, 6, 'Family dinner', '#ff0000', '2019-02-08 00:00:00', '2019-02-09 00:00:00', 'Buy food'),
-(42, 7, 'Reunion', '#FFD700', '2019-02-09 00:00:00', '2019-02-10 00:00:00', 'Office'),
-(45, 1, '', '', '2019-02-08 00:00:00', '2019-02-09 00:00:00', ''),
-(46, 1, 'Varios dados', '', '2019-02-15 00:00:00', '2019-02-19 00:00:00', ''),
-(48, 1, '', '', '2019-02-24 06:00:00', '2019-02-25 09:00:00', '');
-
--- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `users`
@@ -63,17 +49,6 @@ CREATE TABLE `users` (
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `users`
---
-
-INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(1, 'John', 'john@mail.com', 'df780a97b7d6a8f779f14728bccd3c4c'),
-(6, 'Mary', 'mary@mail.com', 'df780a97b7d6a8f779f14728bccd3c4c'),
-(7, 'Tom', 'tom@mail.com', 'df780a97b7d6a8f779f14728bccd3c4c'),
-(8, 'Frank', 'frank@mail.com', 'df780a97b7d6a8f779f14728bccd3c4c'),
-(12, 'teste', 'teste@teste.com', 'df780a97b7d6a8f779f14728bccd3c4c');
 
 --
 -- Indexes for dumped tables
@@ -93,25 +68,7 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
 
---
--- AUTO_INCREMENT for dumped tables
---
 
---
--- AUTO_INCREMENT for table `events`
---
-ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- Constraints for dumped tables
---
 
 --
 -- Limitadores para a tabela `events`
